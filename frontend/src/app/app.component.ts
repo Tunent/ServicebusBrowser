@@ -6,6 +6,10 @@ import { IConnection } from './connections/ngrx/connections.models';
 import { getStoredConnections } from './connections/ngrx/connections.selectors';
 import { LogService } from './logging/log.service';
 import { State } from './ngrx.module';
+import {FlatTreeControl, NestedTreeControl} from '@angular/cdk/tree';
+import {MatTreeFlatDataSource, MatTreeFlattener, MatTreeNestedDataSource} from '@angular/material/tree';
+
+
 
 @Component({
   selector: 'app-root',
@@ -13,6 +17,8 @@ import { State } from './ngrx.module';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit, OnDestroy {
+  
+ 
   logs: string[] = [];
   storedConnections: IConnection[] = [];
 
@@ -20,8 +26,10 @@ export class AppComponent implements OnInit, OnDestroy {
 
   constructor(
     private store: Store<State>,
-    private log: LogService
+    private log: LogService,
+   
   ) {
+    
   }
 
   ngOnInit(): void {
@@ -44,4 +52,7 @@ export class AppComponent implements OnInit, OnDestroy {
   ngOnDestroy(): void {
     this.subs.unsubscribe();
   }
+
+  
+
 }

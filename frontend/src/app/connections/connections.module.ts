@@ -17,6 +17,11 @@ import { TopicsModule } from '../topics/topics.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { SelectTargetConnectionItemComponent } from './select-target-connection-item/select-target-connection-item.component';
 import { SelectTargetConnectionPlaneComponent } from './select-target-connection-plane/select-target-connection-plane.component';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatTreeModule } from '@angular/material/tree';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -36,7 +41,12 @@ import { SelectTargetConnectionPlaneComponent } from './select-target-connection
     QueuesModule,
     TopicsModule,
     UiModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    MatTreeModule,
+    MatSlideToggleModule,
+    MatIconModule,
+    MatButtonModule
   ],
   exports: [
     ConnectionPlaneComponent,

@@ -17,6 +17,11 @@ import { TopicsModule } from './topics/topics.module';
 import { MessagesModule } from './messages/messages.module';
 import { MainEffectsEffects } from './main-effects.effects';
 import { NuMonacoEditorModule } from '@ng-util/monaco-editor';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatTreeModule} from '@angular/material/tree';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import {MatButtonModule} from '@angular/material/button';
+import {MatIcon, MatIconModule} from '@angular/material/icon';
 
 @NgModule({
     declarations: [AppComponent, MainComponent],

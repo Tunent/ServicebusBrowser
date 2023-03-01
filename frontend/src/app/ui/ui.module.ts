@@ -20,10 +20,12 @@ import { TextboxInputDialogComponent } from './textbox-input-dialog/textbox-inpu
 import { TextboxDialogInputComponent } from './textbox-dialog-input/textbox-dialog-input.component';
 import { FirstLinePipe } from './pipes/first-line.pipe';
 import { TabBarComponent } from './tab-bar/tab-bar.component';
-import {RouterModule} from '@angular/router';
+import { RouterModule } from '@angular/router';
 import { TasksListComponent } from './tasks-list/tasks-list.component';
-import {NuMonacoEditorModule} from '@ng-util/monaco-editor';
+import { NuMonacoEditorModule } from '@ng-util/monaco-editor';
 import { ConfirmDialogBodyComponent } from './confirm-dialog-body/confirm-dialog-body.component';
+import { MaterialModule } from './material.module';
+
 @NgModule({
   declarations: [
     MenubarComponent,
@@ -53,22 +55,24 @@ import { ConfirmDialogBodyComponent } from './confirm-dialog-body/confirm-dialog
     FormsModule,
     ReactiveFormsModule,
     NuMonacoEditorModule,
-    RouterModule
+    RouterModule,
+    MaterialModule,
   ],
-    exports: [
-        MenubarComponent,
-        MenuItemComponent,
-        SubmenuItemComponent,
-        SidebarComponent,
-        ConsoleComponent,
-        ToggleBoxComponent,
-        ContextmenuItemComponent,
-        RefreshButtonComponent,
-        DurationInputComponent,
-        ContextmenuDividerComponent,
-        TextboxDialogInputComponent,
-        TabBarComponent,
-        TasksListComponent
-    ]
+  exports: [
+    MenubarComponent,
+    MenuItemComponent,
+    SubmenuItemComponent,
+    SidebarComponent,
+    ConsoleComponent,
+    ToggleBoxComponent,
+    ContextmenuItemComponent,
+    RefreshButtonComponent,
+    DurationInputComponent,
+    ContextmenuDividerComponent,
+    TextboxDialogInputComponent,
+    TabBarComponent,
+    TasksListComponent,
+    MaterialModule,
+  ]
 })
 export class UiModule { }
